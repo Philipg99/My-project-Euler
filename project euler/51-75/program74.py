@@ -21,7 +21,7 @@ def numf(n):
 ## main loop
 count=0
 for i in range(1000000):
-    if i%10000==0:
+    if i%100000==0:
         print(i,time.time()-t)
     l=[i]
     m=0

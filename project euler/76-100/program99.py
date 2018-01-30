@@ -9,6 +9,8 @@ while True:
         break
     temp=list(map(int,n.split()))
     r.append(temp)
+
+    
 mx=0
 mi=0
 for i in range(len(r)):
