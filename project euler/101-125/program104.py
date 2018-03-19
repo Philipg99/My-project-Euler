@@ -1,4 +1,5 @@
 import time
+import math
 t=time.time()
 chec=[1,2,3,4,5,6,7,8,9]
 
@@ -11,12 +12,12 @@ while len(str(fn))<9:
 
 
 
-def check(n): 
-    f10=n%1000000000
+def check(n):
+    f10=n%10**9
     f10=list(map(int,list(str(f10))))
     f10.sort()
     if f10==chec :
-        l10=n//(10**(len(str(n))-9))
+        l10=n//(10**int((math.log(n,10)-9)))
         l10=list(map(int,list(str(l10))))
         l10.sort()
         if l10==chec:

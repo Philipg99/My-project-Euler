@@ -45,17 +45,24 @@ def sides(n,i):
 dic={}
 
 for i in y:
-    t=[]
     for k in dic:
         if sides(k,i):
             dic[k]+=[i]
-            t+=[k]
-    dic[i]=dic.get(i,[i])+t
+    dic[i]=dic.get(i,[])
         
 
 
-for k in dic:
-    if dic[k]!=[]:
-        print(k,dic[k])
+
+for i in dic:
+    for j in dic[i]:
+        for k in dic[j]:
+            if k in dic[i]:
+                for l in dic[k]:
+                    if l in dic[j] and l in dic[i]:
+                        for m in dic[l]:
+                            if m in dic[k] and m in dic[j] and m in dic[i]:
+                                print(i,j,k,l,m,i+j+k+l+m)
+
+            
 
 print(time.time()-t1)

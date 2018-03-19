@@ -1,12 +1,12 @@
 lar=1
-i=1
+i=2
 num=600851475143
 while True:
     if i>num:
         break
-    if num%i==0:
+    while num%i==0:
+        num/=i
         lar=i
-        num/=i #this can be improved easyly
     i+=1
 
 print(lar)

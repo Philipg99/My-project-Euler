@@ -1,3 +1,5 @@
+import time
+t=time.time()
 a=9
 b=9
 c=9
@@ -27,3 +29,4 @@ while num>100000:
     if flag==1:
         break
 
+print(time.time()-t)
