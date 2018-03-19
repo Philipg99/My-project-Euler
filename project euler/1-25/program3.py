@@ -1,11 +1,9 @@
-i=2
+i=1
 num=600851475143
 while num>1:
+    i+=1
     while num%i==0:
         num/=i
-    if num==1:
-        print(i)
-        break
-    i+=1
 
 
+print(i)
