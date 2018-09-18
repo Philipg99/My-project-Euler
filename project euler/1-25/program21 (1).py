@@ -1,6 +1,3 @@
-import time
-t=time.time()
-
 def d(n):
     i=2
     total =1
@@ -17,5 +14,5 @@ for i in range(2,10000):
         lst+=[i,d(i)]
 
 print (sum(lst))
-print(time.time()-t)
+        
     

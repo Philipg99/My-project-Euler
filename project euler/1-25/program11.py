@@ -39,7 +39,6 @@ for i in range(3,17):
             t8*=mat[i-k][j+k]
         lst+=[t1,t2,t3,t4,t5,t6,t7,t8]
 
-print (lst)
 print (max(lst))
         
 

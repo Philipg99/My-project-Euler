@@ -8,6 +8,9 @@ while True:
         break
     temp=list(map(int,n.split()))
     r.append(temp)
+
+
+    
 for i in range(len(r)-2,-1,-1):
     for j in range(len(r[i])):
 

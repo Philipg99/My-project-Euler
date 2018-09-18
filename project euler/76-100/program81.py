@@ -9,13 +9,13 @@ while True:
         break
     temp=list(map(int,n.split()))
     r.append(temp)
-
-for i in range(78,-1,-1):
-    r[79][i]+=r[79][i+1]
-    r[i][79]+=r[i+1][79]
+a=len(r[0])
+for i in range(a-2,-1,-1):
+    r[79][i]+=r[a-1][i+1]
+    r[i][79]+=r[i+1][a-1]
     
 
-for i in range(78,-1,-1):
+for i in range(a-2,-1,-1):
     for j in range(i,-1,-1):
         if r[i+1][j]<r[i][j+1]:
             r[i][j]+=r[i+1][j]

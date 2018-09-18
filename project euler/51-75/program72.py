@@ -1,26 +1,26 @@
-##fundamentaly broken
+from time import time as t
+w=t()
 
-import time
-t = time.time()
+l=[]
+for i in range(1000001):
+    l+=[[]]
 
 
-r=10
-a = [[]]
-for i in range(r):
-    a+=[[]]
-for i in range(2,r+1):
-    j=1##one to incldue it self
-    while j*i<r+1:
-        a[j*i]+=[i]
-        j+=1
-print(time.time()-t)
-##for i in range(len(a)):
-##    print(i,a[i])
+for i in range(2,1000001):
+    if len(l[i])==0:
+        for j in range(i,1000001,i):
+            l[j]+=[i]
 
-for i in range(2,len(a)):
-    x=len(a[i])
-    phi=i-x
-    print(i,phi,i/phi,a[i])
-    
+def toi(n,l):
+    p=n
+    for i in l[n]:
+        p*=(1-1/i)
+    return int(p)
+print('start')
+s=0
+for i in range(2,10**6+1):
+    s+=toi(i,l)
 
-print(time.time()-t)
+print(s)
+
+print(t()-w)

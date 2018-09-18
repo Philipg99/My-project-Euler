@@ -7,6 +7,8 @@ while True:
     if n=='':
         break
     r.append(int(n))
+
+    
 su=sum(r)
 while su>10000000000:
     su//=10
