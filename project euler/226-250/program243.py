@@ -1,28 +1,22 @@
-import time
-t=time.time()
+from time import time as ta
+wa=ta()
 
-def gcd(a, b):
-    while b:
-        a, b=b, a%b
-    return a
-def phi(a):
-    b=a-1
-    c=0
-    while b:
-        if gcd(a,b)==1:
-            c+=1
-        b-=1
-    return c
-n=2*3*4*5*6*7*11*13*17
-f=1
+pri=[2,3,5,7,11,13,17,19,23,29,31,37]
 
-while f>15499/94744:
-    ft=phi(n)/n
-    if ft<f:
-        f=ft
-        print('lowest',f)
-    n+=1
-    if n%500==0:
-        print(n,'       ',time.time()-t)
 
-print(time.time()-t)
+def toi(n,pri):
+    p=n
+    for i in pri:
+        if n%i==0:
+            p*=(1-1/i)
+    return int(p)
+
+n=1
+for i in pri:
+    n*=i
+    if (toi(n,pri)/n-1)<15499/94744:
+        print(n)
+    print(n,'3e')
+    
+    
+print(ta()-wa)

@@ -14,6 +14,6 @@ def phi(a):
         b-=1
     return c
 
-print (phi(100000))
+print (phi(100000000))
 
 print(time.time()-t)

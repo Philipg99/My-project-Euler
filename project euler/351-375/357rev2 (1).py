@@ -12,7 +12,7 @@ def sieve(limit):
             for n in range(i*i, limit, i):     # Mark factors non-prime
                 a[n] = False
 
-x= list(sieve(10000000))
+x= list(sieve(1000000))
 print(time.time()-t)
 lon=len(x)
 def d(n): ##checked

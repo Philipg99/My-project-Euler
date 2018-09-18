@@ -9,5 +9,5 @@ def sieve(limit):
             yield i
             for n in range(i*i, limit, i):     # Mark factors non-prime
                 a[n] = False
-x= list(sieve(100000000))
+x= list(sieve(1000))
 print(time.time()-t)
